@@ -4,6 +4,6 @@ paper-shadow {
 }
 core-animated-pages {
     width: 1200px;
-    min-height: 150px;
+    min-height: 180px;
     overflow-x: hidden;
 }
