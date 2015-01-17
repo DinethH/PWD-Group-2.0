@@ -1,41 +1,108 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../../bower_components/core-animated-pages/core-animated-pages.html">
+<link rel="import" href="../../bower_components/core-animated-pages/transitions/cross-fade.html">
+<link rel="import" href="../../bower_components/core-animated-pages/transitions/slide-from-right.html">
+<link rel="import" href="../../bower_components/core-collapse/core-collapse.html">
 <link rel="import" href="../../custom-elements/menu-item/menu-item.html">
 
-<polymer-element name="pwdgroup-menu" attributes="selectedItem">
+<polymer-element name="pwdgroup-menu" attributes="selectedItem collapseMenuVar">
     <template>
         <link rel="stylesheet" href="pwdgroup-menu.css">
 
         <paper-shadow z="0">
-            <div horizontal layout>
-                <div flex>
-                    <menu-item text="Home" color="000000"></menu-item>
+            <div>
+                <div horizontal layout on-mouseover="{{expandMenu}}">
+                    <div flex>
+                        <menu-item on-mouseover="{{menuHome}}" on-tap="{{menuHome}}" text="Home" color="000000"></menu-item>
+                    </div>
+                    <div flex>
+                        <menu-item on-mouseover="{{menuConsulting}}" on-tap="{{menuConsulting}}" text="Consulting" color="3f51b5"></menu-item>
+                    </div>
+                    <div flex>
+                        <menu-item on-mouseover="{{menuPublications}}" on-tap="{{menuPublications}}" text="Publications" color="009688"></menu-item>
+                    </div>
+                    <div flex>
+                        <menu-item on-mouseover="{{menuInnovation}}" on-tap="{{menuInnovation}}" text="Innovation & Technology" color="ff5722"></menu-item>
+                    </div>
+                    <div flex>
+                        <menu-item on-mouseover="{{menuTraining}}" on-tap="{{menuTraining}}" text="Training & Certification" color="e91e63"></menu-item>
+                    </div>
+                    <div flex>
+                        <menu-item on-mouseover="{{menuRealEstate}}" on-tap="{{menuRealEstate}}" text="Real Estate" color="f44336"></menu-item>
+                    </div>
                 </div>
-                <div flex>
-                    <menu-item text="Consulting" color="3f51b5"></menu-item>
+                <div style="width: 100%; height: 3px; background-color: #{{color}};">
                 </div>
-                <div flex>
-                    <menu-item text="Publications" color="009688"></menu-item>
+                <div style="padding-top: 20px; font-size: 20px;">
+                    <core-collapse id="collapse">
+                        <core-animated-pages selected="{{selectedMenuExpanded}}" transitions="cross-fade-all slide slide-from-right">
+                            <section>
+                                <div horizontal layout style="color: #{{color}};">
+                                    Nothing here... Move on.. {{collapseMenuVar}}
+                                </div>
+                            </section>
+                            <section>
+                                <div horizontal layout style="color: #{{color}};">
+                                    <div flex>
+                                        Projects
+                                    </div>
+                                    <div flex>
+                                        Services
+                                    </div>
+                                    <div flex>
+                                        Employees
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div horizontal layout style="color: #{{color}};">
+                                    <div flex>
+                                        Products
+                                    </div>
+                                    <div flex>
+                                        Services
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div horizontal layout style="color: #{{color}};">
+                                    <div flex>
+                                        Products
+                                    </div>
+                                    <div flex>
+                                        Services
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div horizontal layout style="color: #{{color}};">
+                                    <div flex>
+                                        Conferences
+                                    </div>
+                                    <div flex>
+                                        Programs
+                                    </div>
+                                </div>
+                            </section>
+                        </core-animated-pages>
+                    </core-collapse>
+
                 </div>
-                <div flex>
-                    <menu-item text="Innovation & Technology" color="ff5722"></menu-item>
-                </div>
-                <div flex>
-                    <menu-item text="Training & Certification" color="e91e63"></menu-item>
-                </div>
-                <div flex>
-                    <menu-item text="Real Estate" color="f44336"></menu-item>
-                </div>
+                <br>
+                <br>
+                <br>
             </div>
-            <div style="width: 100%; height: 3px; background-color: #{{color}};">
-            </div>
-            <br>
-            <br>
+
         </paper-shadow>
     </template>
 
     <script>
         Polymer({
+            created: function () {
+                this.selectedMenuExpanded = 0;
+                this.collapseMenuVar = false;
+            },
             ready: function () {
                 switch (this.selectedItem) {
                 case "Home":
@@ -59,7 +126,40 @@
                 default:
                     this.color = "000000";
                 }
-
+            },
+            menuHome: function () {
+                this.selectedMenuExpanded = 0;
+                this.color = "000000";
+            },
+            menuConsulting: function () {
+                this.color = "3f51b5";
+                this.selectedMenuExpanded = 1;
+            },
+            menuPublications: function () {
+                this.color = "009688";
+                this.selectedMenuExpanded = 2;
+            },
+            menuInnovation: function () {
+                this.color = "ff5722";
+                this.selectedMenuExpanded = 3;
+            },
+            menuTraining: function () {
+                this.color = "e91e63";
+                this.selectedMenuExpanded = 4;
+            },
+            expandMenu: function () {
+                this.menuHover = true;
+                this.collapseMenuVar = false;
+                this.$.collapse.opened = true;
+            },
+            collapseMenu: function () {
+                this.menuHover = false;
+                this.$.collapse.opened = false;
+            },
+            collapseMenuVarChanged: function () {
+                if (this.collapseMenuVar == true) {
+                    this.$.collapse.opened = false;
+                }
             }
 
         });

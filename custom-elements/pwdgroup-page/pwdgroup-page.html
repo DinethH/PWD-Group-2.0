@@ -1,34 +1,46 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../custom-elements/pwdgroup-menu/pwdgroup-menu.html">
-<polymer-element name="pwdgroup-page" attributes="text color">
+<polymer-element name="pwdgroup-page" attributes="selectedPage">
     <template>
         <link rel="stylesheet" href="pwdgroup-page.css">
         <style>
         </style>
 
-            <header>
-                <div horizontal layout class="top-header">
-                    <div>
-                        <img style="width: 50%;" src="../../PWD-Group.png">
+        <header>
+            <div horizontal layout class="top-header">
+                <div>
+                    <img style="width: 50%;" src="../../PWD-Group.png">
+                </div>
+                <div flex></div>
+                <div horizontal layout class="top-nav-links">
+                    <div style="width: 100px;">
+                        <a href="#">About Us</a>
                     </div>
-                    <div flex></div>
-                    <div horizontal layout class="top-nav-links">
-                        <div style="width: 100px;">
-                            <a href="#">About Us</a>
-                        </div>
-                        <div style="width: 100px;">
-                            <a href="#">Contact Us</a>
-                        </div>
+                    <div style="width: 100px;">
+                        <a href="#">Contact Us</a>
                     </div>
                 </div>
-                <pwdgroup-menu></pwdgroup-menu>
-            </header>
+            </div>
+            <pwdgroup-menu selectedItem="{{selectedPage}}" collapseMenuVar="{{collapseMenuVar}}"></pwdgroup-menu>
+        </header>
+
+        <section class="page-wrapper">
+            <div class="inner-wrapper" on-mouseover="{{collapseMenu}}">
+                <content>
+                </content>
+            </div>
+        </section>
 
     </template>
 
     <script>
         Polymer({
-
+            created: function () {
+                this.collapseMenuVar = false;
+            },
+            collapseMenu: function () {
+                this.collapseMenuVar = true;
+            }
         });
     </script>
 

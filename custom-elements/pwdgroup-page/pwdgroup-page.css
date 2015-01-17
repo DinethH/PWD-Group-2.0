@@ -1,4 +1,4 @@
-header, .wrapper, footer {
+header, .page-wrapper, footer {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -12,4 +12,10 @@ header {
     color: #e6e6e6;
     font-size: 14px;
     text-decoration: none;
+}
+.page-wrapper {
+    background-color: white;
+}
+.inner-wrapper {
+    padding: 20px;
 }
