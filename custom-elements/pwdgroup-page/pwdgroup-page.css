@@ -1,0 +1,15 @@
+header, .wrapper, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header {
+    margin-top: 30px;
+}
+.top-header {
+    padding-bottom: 30px;
+}
+.top-nav-links a {
+    color: #e6e6e6;
+    font-size: 14px;
+    text-decoration: none;
+}
