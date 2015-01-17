@@ -1,0 +1,12 @@
+.wrapper {
+    min-width: 200px;
+}
+.letter {
+    font-size: 60px;
+    font-weight: 300;
+}
+.word {
+    
+    font-size: 20px;
+    font-weight: 300;
+}

@@ -1,0 +1,69 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../../custom-elements/menu-item/menu-item.html">
+
+<polymer-element name="pwdgroup-menu" attributes="selectedItem">
+    <template>
+        <link rel="stylesheet" href="pwdgroup-menu.css">
+
+        <paper-shadow z="0">
+            <div horizontal layout>
+                <div flex>
+                    <menu-item text="Home" color="000000"></menu-item>
+                </div>
+                <div flex>
+                    <menu-item text="Consulting" color="3f51b5"></menu-item>
+                </div>
+                <div flex>
+                    <menu-item text="Publications" color="009688"></menu-item>
+                </div>
+                <div flex>
+                    <menu-item text="Innovation & Technology" color="ff5722"></menu-item>
+                </div>
+                <div flex>
+                    <menu-item text="Training & Certification" color="e91e63"></menu-item>
+                </div>
+                <div flex>
+                    <menu-item text="Real Estate" color="f44336"></menu-item>
+                </div>
+            </div>
+            <div style="width: 100%; height: 3px; background-color: #{{color}};">
+            </div>
+            <br>
+            <br>
+        </paper-shadow>
+    </template>
+
+    <script>
+        Polymer({
+            ready: function () {
+                switch (this.selectedItem) {
+                case "Home":
+                    this.color = "000000";
+                    break;
+                case "Consulting":
+                    this.color = "3f51b5";
+                    break;
+                case "Publications":
+                    this.color = "009688";
+                    break;
+                case "Innovation & Technology":
+                    this.color = "ff5722";
+                    break;
+                case "Training & Certification":
+                    this.color = "e91e63";
+                    break;
+                case "Real Estate":
+                    this.color = "f44336";
+                    break;
+                default:
+                    this.color = "000000";
+                }
+
+            }
+
+        });
+    </script>
+
+</polymer-element>
+

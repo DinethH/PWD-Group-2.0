@@ -1,0 +1,28 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<polymer-element name="menu-item" attributes="text color">
+    <template>
+        <link rel="stylesheet" href="menu-item.css">
+        <style>
+        </style>
+
+        <div horizontal layout center class="wrapper" style="color: #{{color}}">
+            <div>
+                <span class="letter">{{letter}}</span>
+            </div>
+            <div>
+                <span class="word">{{word}}</span>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+           ready: function () {
+               this.letter = this.text.charAt(0);
+               this.word = this.text.substr(1);
+           }
+        });
+    </script>
+
+</polymer-element>
+
