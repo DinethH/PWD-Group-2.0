@@ -12,38 +12,30 @@
 
         <paper-shadow z="0">
             <div>
-                <div horizontal layout on-mouseover="{{expandMenu}}">
+                <div horizontal layout >
+ 
                     <div flex>
-                        <menu-item on-mouseover="{{menuHome}}" on-tap="{{menuHome}}" text="Home" color="000000"></menu-item>
+                        <menu-item on-tap="{{menuConsulting}}" text="Consulting" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
                     </div>
                     <div flex>
-                        <menu-item on-mouseover="{{menuConsulting}}" on-tap="{{menuConsulting}}" text="Consulting" color="3f51b5"></menu-item>
+                        <menu-item on-tap="{{menuPublications}}" text="Publications" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
                     </div>
                     <div flex>
-                        <menu-item on-mouseover="{{menuPublications}}" on-tap="{{menuPublications}}" text="Publications" color="009688"></menu-item>
+                        <menu-item on-tap="{{menuInnovation}}" text="Technology" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
                     </div>
                     <div flex>
-                        <menu-item on-mouseover="{{menuInnovation}}" on-tap="{{menuInnovation}}" text="Innovation & Technology" color="ff5722"></menu-item>
+                        <menu-item on-tap="{{menuTraining}}" text="Certification" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
                     </div>
                     <div flex>
-                        <menu-item on-mouseover="{{menuTraining}}" on-tap="{{menuTraining}}" text="Training & Certification" color="e91e63"></menu-item>
-                    </div>
-                    <div flex>
-                        <menu-item on-mouseover="{{menuRealEstate}}" on-tap="{{menuRealEstate}}" text="Real Estate" color="f44336"></menu-item>
+                        <menu-item on-tap="{{menuRealEstate}}" text="Real Estate" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
                     </div>
                 </div>
-                <div style="width: 100%; height: 3px; background-color: #{{color}};">
-                </div>
-                <div style="padding-top: 20px; font-size: 20px;">
+           
+                <div style="font-size: 20px;">
                     <core-collapse id="collapse">
                         <core-animated-pages selected="{{selectedMenuExpanded}}" transitions="cross-fade-all slide slide-from-right">
                             <section>
-                                <div horizontal layout style="color: #{{color}};">
-                                    Nothing here... Move on.. {{collapseMenuVar}}
-                                </div>
-                            </section>
-                            <section>
-                                <div horizontal layout style="color: #{{color}};">
+                                <div horizontal layout class="menu-expanded">
                                     <div flex>
                                         Projects
                                         <ul>
@@ -77,7 +69,7 @@
                                 </div>
                             </section>
                             <section>
-                                <div horizontal layout style="color: #{{color}};">
+                                <div horizontal layout class="menu-expanded">
                                     <div flex>
                                         Products
                                         <ul>
@@ -90,7 +82,7 @@
                                 </div>
                             </section>
                             <section>
-                                <div horizontal layout style="color: #{{color}};">
+                                <div horizontal layout class="menu-expanded">
                                     <div flex>
                                         Products
                                         <ul>
@@ -108,7 +100,7 @@
                                 </div>
                             </section>
                             <section>
-                                <div horizontal layout style="color: #{{color}};">
+                                <div horizontal layout class="menu-expanded">
                                     <div flex>
                                         Conferences
                                         <ul>
@@ -127,11 +119,7 @@
                             </section>
                         </core-animated-pages>
                     </core-collapse>
-
                 </div>
-                <br>
-                <br>
-                <br>
             </div>
 
         </paper-shadow>
@@ -143,49 +131,21 @@
                 this.selectedMenuExpanded = 0;
                 this.collapseMenuVar = false;
             },
-            ready: function () {
-                switch (this.selectedItem) {
-                case "Home":
-                    this.color = "000000";
-                    break;
-                case "Consulting":
-                    this.color = "3f51b5";
-                    break;
-                case "Publications":
-                    this.color = "009688";
-                    break;
-                case "Innovation & Technology":
-                    this.color = "ff5722";
-                    break;
-                case "Training & Certification":
-                    this.color = "e91e63";
-                    break;
-                case "Real Estate":
-                    this.color = "f44336";
-                    break;
-                default:
-                    this.color = "000000";
-                }
-            },
-            menuHome: function () {
-                this.selectedMenuExpanded = 0;
-                this.color = "000000";
-            },
             menuConsulting: function () {
-                this.color = "3f51b5";
-                this.selectedMenuExpanded = 1;
+                this.selectedMenuExpanded = 0;
+                this.expandMenu ();
             },
             menuPublications: function () {
-                this.color = "009688";
-                this.selectedMenuExpanded = 2;
+                this.selectedMenuExpanded = 1;
+                this.expandMenu ();
             },
             menuInnovation: function () {
-                this.color = "ff5722";
-                this.selectedMenuExpanded = 3;
+                this.selectedMenuExpanded = 2;
+                this.expandMenu ();
             },
             menuTraining: function () {
-                this.color = "e91e63";
-                this.selectedMenuExpanded = 4;
+                this.selectedMenuExpanded = 3;
+                this.expandMenu ();
             },
             expandMenu: function () {
                 this.menuHover = true;

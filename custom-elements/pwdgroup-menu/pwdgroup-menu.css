@@ -1,9 +1,15 @@
 paper-shadow {
-    background-color: #ececec;
-    padding: 20px;
+    background-color: #333;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 core-animated-pages {
     width: 1200px;
-    min-height: 180px;
+    height: 250px;
     overflow-x: hidden;
+}
+.menu-expanded {
+    color: black;
+    background: white;
+    padding: 15px;
 }
