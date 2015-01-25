@@ -3,13 +3,69 @@ paper-shadow {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
 core-animated-pages {
     width: 1200px;
-    height: 250px;
-    overflow-x: hidden;
+    height: 450px;
+    overflow: hidden;
 }
-.menu-expanded {
-    color: black;
-    background: white;
+
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.menu-heading {
+    text-transform: uppercase;
+    color: white;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 3px;
+}
+
+.menu-sub-headings {
+    padding: 20px;
+    color: white;
+    //text-align: center;
+}
+
+.menu-sub-2-headings {
+    font-size: 16px;
+    color: #ececec;
+    //text-indent: 10px;
+    line-height: 26px;
+}
+
+.projects,
+.services,
+.employees,
+.productsm,
+.conferences,
+.programs, .products {
+    height: 150px;
     padding: 15px;
+}
+
+.services {
+    background: #2196F3;
+}
+
+.projects {
+    background: #E91E63;
+}
+
+.employees {
+    background: #4CAF50;
+}
+
+.products {
+    background: #FF9800;
+}
+
+.conferences {
+    background: #FFC107;
+}
+
+.programs {
+    background: #00BCD4;
 }

@@ -4,6 +4,7 @@
 <link rel="import" href="../../bower_components/core-animated-pages/transitions/cross-fade.html">
 <link rel="import" href="../../bower_components/core-animated-pages/transitions/slide-from-right.html">
 <link rel="import" href="../../bower_components/core-collapse/core-collapse.html">
+<link rel="import" href="../../bower_components/core-image/core-image.html">
 <link rel="import" href="../../custom-elements/menu-item/menu-item.html">
 
 <polymer-element name="pwdgroup-menu" attributes="selectedItem collapseMenuVar">
@@ -12,8 +13,8 @@
 
         <paper-shadow z="0">
             <div>
-                <div horizontal layout >
- 
+                <div horizontal layout>
+
                     <div flex>
                         <menu-item on-tap="{{menuConsulting}}" text="Consulting" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
                     </div>
@@ -30,92 +31,121 @@
                         <menu-item on-tap="{{menuRealEstate}}" text="Real Estate" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
                     </div>
                 </div>
-           
+
                 <div style="font-size: 20px;">
                     <core-collapse id="collapse">
                         <core-animated-pages selected="{{selectedMenuExpanded}}" transitions="cross-fade-all ">
                             <section>
-                                <div horizontal layout class="menu-expanded">
-                                    <div flex>
-                                        Projects
-                                        <ul>
-                                            <li>Conferences</li>
-                                        </ul>
+                                <div>
+                                    <core-image style="width:1200px; height:300px;" sizing="cover" src="../../img/consulting.jpg"></core-image>
+                                </div>
+                                <div horizontal layout>
+                                    <div flex class="projects">
+                                        <h3 class="menu-heading">Projects</h3>
+                                        <div vertical layout end-justified class="menu-sub-headings">
+                                            <div horizontal layout>
+                                                <div flex>Conferences</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div flex>
-                                        Services
-                                        <ul>
-                                            <li>Certification</li>
-                                            <li>Employee Placement</li>
-                                        </ul>
+                                    <div flex class="services">
+                                        <h3 class="menu-heading">Services</h3>
+                                        <div vertical layout end-justified class="menu-sub-headings">
+                                            <div horizontal layout>
+                                                <div flex>Certification</div>
+                                                <div flex>Employee Placement</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div flex>
-                                        Employees
-                                        <ul>
-                                            <li>Current
-                                                <ul>
-                                                    <li>Training</li>
-                                                    <li>Full-Time</li>
-                                                </ul>
-                                            </li>
-                                            <li>Past
-                                                <ul>
-                                                    <li>Training</li>
-                                                    <li>Full-Time</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                    <div flex class="employees">
+                                        <h3 class="menu-heading">Employees</h3>
+                                        <div vertical layout end-justified class="menu-sub-headings">
+                                            <div horizontal layout>
+                                                <div flex>
+                                                    <div>Current</div>
+                                                </div>
+                                                <div flex>
+                                                    <div>Past</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
                             <section>
-                                <div horizontal layout class="menu-expanded">
-                                    <div flex>
-                                        Products
-                                        <ul>
-                                            <li>Books</li>
-                                        </ul>
+                                <div vertical layout>
+                                    <div horizontal layout>
+                                        <core-image style="width:1200px; height:300px;" sizing="cover" src="../../img/publications.jpg"></core-image>
                                     </div>
-                                    <div flex>
-                                        Services
-                                    </div>
-                                </div>
-                            </section>
-                            <section>
-                                <div horizontal layout class="menu-expanded">
-                                    <div flex>
-                                        Products
-                                        <ul>
-                                            <li>Apps</li>
-                                            <li>AD_RFID Products</li>
-                                            <li>Equipment</li>
-                                        </ul>
-                                    </div>
-                                    <div flex>
-                                        Services
-                                        <ul>
-                                            <li>Implementation ??</li>
-                                        </ul>
+                                    <div horizontal layout>
+                                        <div flex class="products">
+                                            <h3 class="menu-heading">Products</h3>
+                                            <div vertical layout end-justified class="menu-sub-headings">
+                                                <div horizontal layout>
+                                                    <div flex>Books</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div flex class="services">
+                                            <h3 class="menu-heading">Services</h3>
+                                            <div vertical layout end-justified class="menu-sub-headings">
+                                                <div horizontal layout>
+                                                    <div flex></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
                             <section>
-                                <div horizontal layout class="menu-expanded">
-                                    <div flex>
-                                        Conferences
-                                        <ul>
-                                            <li>Sig Sigma</li>
-                                            <li>RFID</li>
-                                        </ul>
-                                    </div>
-                                    <div flex>
-                                        Programs
-                                        <ul>
-                                            <li>Six Sigma</li>
-                                            <li>RFID</li>
-                                        </ul>
-                                    </div>
+                                <div>
+                                    <core-image style="width:1200px; height:300px;" sizing="cover" src="../../img/technology.jpg"></core-image>
                                 </div>
+                                <div horizontal layout>
+                                        <div flex class="products">
+                                            <h3 class="menu-heading">Products</h3>
+                                            <div vertical layout end-justified class="menu-sub-headings">
+                                                <div horizontal layout>
+                                                    <div flex>Apps</div>
+                                                    <div flex>AD_RFID <br>Products</div>
+                                                    <div flex>Equipment</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div flex class="services">
+                                            <h3 class="menu-heading">Services</h3>
+                                            <div vertical layout end-justified class="menu-sub-headings">
+                                                <div horizontal layout>
+                                                    <div flex>Implementation??</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </section>
+                            <section>
+                                <div>
+                                    <core-image style="width:1200px; height:300px;" sizing="cover" src="../../img/certification.jpg"></core-image>
+                                </div>
+                                <div horizontal layout>
+                                        <div flex class="conferences">
+                                            <h3 class="menu-heading">Conferences</h3>
+                                            <div vertical layout end-justified class="menu-sub-headings">
+                                                <div horizontal layout>
+                                                    <div flex>Sig Sigma</div>
+                                                    <div flex>RFID</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div flex class="programs">
+                                            <h3 class="menu-heading">Programs</h3>
+                                            <div vertical layout end-justified class="menu-sub-headings">
+                                                <div horizontal layout>
+                                                    <div flex>Six Sigma</div>
+                                                    <div flex>RFID</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                             </section>
                         </core-animated-pages>
                     </core-collapse>
@@ -133,19 +163,19 @@
             },
             menuConsulting: function () {
                 this.selectedMenuExpanded = 0;
-                this.expandMenu ();
+                this.expandMenu();
             },
             menuPublications: function () {
                 this.selectedMenuExpanded = 1;
-                this.expandMenu ();
+                this.expandMenu();
             },
             menuInnovation: function () {
                 this.selectedMenuExpanded = 2;
-                this.expandMenu ();
+                this.expandMenu();
             },
             menuTraining: function () {
                 this.selectedMenuExpanded = 3;
-                this.expandMenu ();
+                this.expandMenu();
             },
             expandMenu: function () {
                 this.menuHover = true;
@@ -166,4 +196,3 @@
     </script>
 
 </polymer-element>
-
