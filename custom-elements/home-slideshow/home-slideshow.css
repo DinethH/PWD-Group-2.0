@@ -1,0 +1,15 @@
+#core_animated_pages2 {
+    height: 100%;
+}
+#section {
+    position: relative;
+}
+.imgTitle {
+    color: rgba(0,0,0,1);
+    font-size: 100px;
+    position: absolute;
+    margin-top: -100px;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+}
