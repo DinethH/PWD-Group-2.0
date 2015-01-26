@@ -9,7 +9,11 @@
     font-size: 100px;
     position: absolute;
     margin-top: -100px;
-    right: 0;
+    left: 0;
     bottom: 0;
     padding: 20px;
+    text-shadow: 2px 2px #333;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    font-family: 'Fondamento', cursive;
 }
