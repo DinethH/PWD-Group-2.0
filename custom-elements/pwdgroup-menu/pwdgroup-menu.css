@@ -6,7 +6,7 @@ paper-shadow {
 
 core-animated-pages {
     width: 1200px;
-    height: 450px;
+    height: 540px;
     overflow: hidden;
 }
 
@@ -24,9 +24,22 @@ h3 {
 }
 
 .menu-sub-headings {
-    padding: 20px;
-    color: white;
-    //text-align: center;
+    width: 100%;
+}
+.menu-sub-headings div {
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 8px;
+    text-align: center;
+    margin-left: -8px;
+}
+.sub2 {
+    text-decoration: none;
+    width: 100%;
+     color: white;
+    
 }
 
 .menu-sub-2-headings {
@@ -42,7 +55,7 @@ h3 {
 .productsm,
 .conferences,
 .programs, .products {
-    height: 150px;
+    height: 200px;
     padding: 15px;
 }
 

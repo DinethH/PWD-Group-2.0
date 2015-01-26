@@ -6,6 +6,7 @@
 <link rel="import" href="../../bower_components/core-collapse/core-collapse.html">
 <link rel="import" href="../../bower_components/core-image/core-image.html">
 <link rel="import" href="../../custom-elements/menu-item/menu-item.html">
+<link rel="import" href="../../custom-elements/menu-sub-item/menu-sub-item.html">
 
 <polymer-element name="pwdgroup-menu" attributes="selectedItem collapseMenuVar">
     <template>
@@ -41,34 +42,34 @@
                                 </div>
                                 <div horizontal layout>
                                     <div flex class="projects">
-                                        <h3 class="menu-heading">Projects</h3>
-                                        <div vertical layout end-justified class="menu-sub-headings">
-                                            <div horizontal layout>
-                                                <div flex>Conferences</div>
+                                        <menu-sub-item subTitle="Projects">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div><a class="sub2" href="">Conferences</a>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </menu-sub-item>
                                     </div>
                                     <div flex class="services">
-                                        <h3 class="menu-heading">Services</h3>
-                                        <div vertical layout end-justified class="menu-sub-headings">
-                                            <div horizontal layout>
-                                                <div flex>Certification</div>
-                                                <div flex>Employee Placement</div>
+                                        <menu-sub-item subTitle="Services">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div><a class="sub2" href="">Certification</a>
+                                                </div>
+                                                <div><a class="sub2" href="">Employee Placement</a>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </menu-sub-item>
+
+
                                     </div>
                                     <div flex class="employees">
-                                        <h3 class="menu-heading">Employees</h3>
-                                        <div vertical layout end-justified class="menu-sub-headings">
-                                            <div horizontal layout>
-                                                <div flex>
-                                                    <div>Current</div>
+                                        <menu-sub-item subTitle="Employees">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div><a class="sub2" href="">Current</a>
                                                 </div>
-                                                <div flex>
-                                                    <div>Past</div>
+                                                <div><a class="sub2" href="">Past</a>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </menu-sub-item>
                                     </div>
                                 </div>
                             </section>
@@ -79,20 +80,21 @@
                                     </div>
                                     <div horizontal layout>
                                         <div flex class="products">
-                                            <h3 class="menu-heading">Products</h3>
-                                            <div vertical layout end-justified class="menu-sub-headings">
-                                                <div horizontal layout>
-                                                    <div flex>Books</div>
+                                            <menu-sub-item subTitle="Products">
+                                                <div vertical layout class="menu-sub-headings">
+                                                    <div><a class="sub2" href="">Books</a>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </menu-sub-item>
                                         </div>
                                         <div flex class="services">
-                                            <h3 class="menu-heading">Services</h3>
-                                            <div vertical layout end-justified class="menu-sub-headings">
-                                                <div horizontal layout>
-                                                    <div flex></div>
+                                            <menu-sub-item subTitle="Services">
+                                                <div vertical layout class="menu-sub-headings">
+                                                    <div>
+                                                        <a class="sub2" href=""></a>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </menu-sub-item>
                                         </div>
                                     </div>
                                 </div>
@@ -102,24 +104,27 @@
                                     <core-image style="width:1200px; height:300px;" sizing="cover" src="../../img/technology.jpg"></core-image>
                                 </div>
                                 <div horizontal layout>
-                                        <div flex class="products">
-                                            <h3 class="menu-heading">Products</h3>
-                                            <div vertical layout end-justified class="menu-sub-headings">
-                                                <div horizontal layout>
-                                                    <div flex>Apps</div>
-                                                    <div flex>AD_RFID <br>Products</div>
-                                                    <div flex>Equipment</div>
+                                    <div flex class="products">
+                                        <menu-sub-item subTitle="Products">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div><a class="sub2" href="">Apps</a>
+                                                </div>
+                                                <div><a class="sub2" href="">AD_RFID</a>
+                                                </div>
+                                                <div><a class="sub2" href="">Equipment</a>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div flex class="services">
-                                            <h3 class="menu-heading">Services</h3>
-                                            <div vertical layout end-justified class="menu-sub-headings">
-                                                <div horizontal layout>
-                                                    <div flex>Implementation??</div>
+                                        </menu-sub-item>
+                                    </div>
+                                    <div flex class="services">
+
+                                        <menu-sub-item subTitle="Services">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div>
+                                                    <a class="sub2" href="">Implementation??</a>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </menu-sub-item>
                                     </div>
                             </section>
                             <section>
@@ -127,30 +132,34 @@
                                     <core-image style="width:1200px; height:300px;" sizing="cover" src="../../img/certification.jpg"></core-image>
                                 </div>
                                 <div horizontal layout>
-                                        <div flex class="conferences">
-                                            <h3 class="menu-heading">Conferences</h3>
-                                            <div vertical layout end-justified class="menu-sub-headings">
-                                                <div horizontal layout>
-                                                    <div flex>Sig Sigma</div>
-                                                    <div flex>RFID</div>
+                                    <div flex class="conferences">
+                                        <menu-sub-item subTitle="Conferences">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div>
+                                                    <a class="sub2" href="">Sig Sigma</a>
+                                                </div><div>
+                                                    <a class="sub2" href="">RFID</a>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div flex class="programs">
-                                            <h3 class="menu-heading">Programs</h3>
-                                            <div vertical layout end-justified class="menu-sub-headings">
-                                                <div horizontal layout>
-                                                    <div flex>Six Sigma</div>
-                                                    <div flex>RFID</div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </menu-sub-item>
                                     </div>
+                                    <div flex class="programs">
+                                        <menu-sub-item subTitle="Programs">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div>
+                                                    <a class="sub2" href="">Sig Sigma</a>
+                                                </div><div>
+                                                    <a class="sub2" href="">RFID</a>
+                                                </div>
+                                            </div>
+                                        </menu-sub-item>
+                                    </div>
+                                </div>
                             </section>
                         </core-animated-pages>
                     </core-collapse>
+                    </div>
                 </div>
-            </div>
 
         </paper-shadow>
     </template>
@@ -160,6 +169,7 @@
             created: function () {
                 this.selectedMenuExpanded = 0;
                 this.collapseMenuVar = false;
+                this.mouseOut = false;
             },
             menuConsulting: function () {
                 this.selectedMenuExpanded = 0;
@@ -190,6 +200,14 @@
                 if (this.collapseMenuVar == true) {
                     this.$.collapse.opened = false;
                 }
+            },
+            hideSubMenu: function () {
+                this.mouseIn = false;
+                this.mouseOut = true;
+            },
+            showSubMenu: function () {
+                this.mouseIn = true;
+                this.mouseOut = false;
             }
 
         });

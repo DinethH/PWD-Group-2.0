@@ -1,0 +1,48 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/core-animated-pages/core-animated-pages.html">
+<link rel="import" href="../../bower_components/core-animated-pages/transitions/cross-fade.html">
+<link rel="import" href="../../bower_components/core-animated-pages/transitions/slide-up.html">
+<polymer-element name="menu-sub-item" attributes="subTitle">
+    <template>
+        <link rel="stylesheet" href="menu-sub-item.css">
+
+        <div on-mouseover="{{hoverStyles}}" on-mouseout="{{normalStyles}}" style="width: 100%; height: 100%;" class="sub-menu-wrapper">
+            <div vertical layout center center-justified style="width: 100%;">
+                <div>
+                    <h3 class="menu-heading" style="font-size: {{subFont}}; padding-top: {{paddingTop}}px; margin-top: {{marginTop}}">{{subTitle}}</h3>
+                </div>
+                <div style="width: 100%;">
+                    <div hidden?="{{!mouseIn}}" style="width: 100%; height: 180px;" vertical layout center-justified>
+                        <div>
+                            <content></content>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            ready: function () {
+                this.selected = 0;
+            },
+            hoverStyles: function () {
+                this.subFont = "26px";
+                this.marginTop = "-50px";
+                this.paddingTop = "50";
+                this.mouseIn = true;
+            },
+            normalStyles: function () {
+                if (this.mouseIn == true) {
+                    this.subFont = "48px";
+                    this.paddingTop = "20";
+                    this.mouseIn = false;
+                    this.marginTop = "0px";
+                }
+            }
+        });
+    </script>
+
+</polymer-element>
