@@ -18,4 +18,5 @@ header {
 }
 .inner-wrapper {
     padding: 20px;
+    min-height: 600px;
 }

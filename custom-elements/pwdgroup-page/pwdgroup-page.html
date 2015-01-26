@@ -5,35 +5,36 @@
         <link rel="stylesheet" href="pwdgroup-page.css">
         <style>
         </style>
-        
 
-        <header>
-            <div horizontal layout class="top-header">
-                <div>
-                    <img style="width: 50%;" src="../../PWD-Group.png">
-                </div>
-                <div flex></div>
-                <div horizontal layout class="top-nav-links">
-                    <div style="width: 100px;">
-                        <a href="#">Home</a>
+
+        <div style="width: 100%;">
+            <header>
+                <div horizontal layout class="top-header">
+                    <div>
+                        <img style="width: 50%;" src="../../PWD-Group.png">
                     </div>
-                    <div style="width: 100px;">
-                        <a href="#">Contact Us</a>
+                    <div flex></div>
+                    <div horizontal layout class="top-nav-links">
+                        <div style="width: 100px;">
+                            <a href="#">Home</a>
+                        </div>
+                        <div style="width: 100px;">
+                            <a href="#">Contact Us</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <pwdgroup-menu selectedItem="{{selectedPage}}" collapseMenuVar="{{collapseMenuVar}}"></pwdgroup-menu>
-        </header>
-
-        <section class="page-wrapper">
-            <div class="inner-wrapper" on-mouseover="{{collapseMenu}}">
-                <content>
-                </content>
-            </div>
-        </section>
-
+                <pwdgroup-menu selectedPage="{{selectedPage}}" collapseMenuVar="{{collapseMenuVar}}"></pwdgroup-menu>
+            </header>
+            <section class="page-wrapper" style="background: {{ {transparent: !collapseMenuVar} | tokenList}}">
+                <div class="inner-wrapper" on-mouseover="{{collapseMenu}}" >
+                    <div hidden?="{{!collapseMenuVar}}">
+                        <content>
+                        </content>
+                    </div>
+                </div>
+            </section>
+        </div>
     </template>
-
     <script>
         Polymer({
             created: function () {
@@ -44,6 +45,4 @@
             }
         });
     </script>
-
 </polymer-element>
-

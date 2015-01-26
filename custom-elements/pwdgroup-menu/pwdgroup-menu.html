@@ -8,7 +8,7 @@
 <link rel="import" href="../../custom-elements/menu-item/menu-item.html">
 <link rel="import" href="../../custom-elements/menu-sub-item/menu-sub-item.html">
 
-<polymer-element name="pwdgroup-menu" attributes="selectedItem collapseMenuVar">
+<polymer-element name="pwdgroup-menu" attributes="selectedItem collapseMenuVar selectedPage">
     <template>
         <link rel="stylesheet" href="pwdgroup-menu.css">
 
@@ -34,6 +34,120 @@
                 </div>
 
                 <div style="font-size: 20px;">
+                    <core-collapse id="collapse2">
+                        <div style="background: white;" horizontal layout flex>
+                            <template if="{{selectedPage=='Consulting'}}">
+                                <div horizontal layout flex>
+                                    <div flex class="projects">
+                                        <menu-sub-item subTitle="Projects">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div><a class="sub2" href="../../conferences/">Conferences</a>
+                                                </div>
+                                            </div>
+                                        </menu-sub-item>
+                                    </div>
+                                    <div flex class="services">
+                                        <menu-sub-item subTitle="Services">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div><a class="sub2" href="../../certification/">Certification</a>
+                                                </div>
+                                                <div><a class="sub2" href="../../employee-placement/">Employee Placement</a>
+                                                </div>
+                                            </div>
+                                        </menu-sub-item>
+
+
+                                    </div>
+                                    <div flex class="employees">
+                                        <menu-sub-item subTitle="Employees">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div><a class="sub2" href="">Current</a>
+                                                </div>
+                                                <div><a class="sub2" href="">Past</a>
+                                                </div>
+                                            </div>
+                                        </menu-sub-item>
+                                    </div>
+                                </div>
+                            </template>
+                            <template if="{{selectedPage=='Publications'}}">
+                                <div horizontal layout>
+                                    <div flex class="products">
+                                        <menu-sub-item subTitle="Products">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div><a class="sub2" href="">Books</a>
+                                                </div>
+                                            </div>
+                                        </menu-sub-item>
+                                    </div>
+                                    <div flex class="services">
+                                        <menu-sub-item subTitle="Services">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div>
+                                                    <a class="sub2" href=""></a>
+                                                </div>
+                                            </div>
+                                        </menu-sub-item>
+                                    </div>
+                                </div>
+                            </template>
+                            <template if="{{selectedPage=='Technology'}}">
+                                <div horizontal layout>
+                                    <div flex class="products">
+                                        <menu-sub-item subTitle="Products">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div><a class="sub2" href="">Apps</a>
+                                                </div>
+                                                <div><a class="sub2" href="">RFID</a>
+                                                </div>
+                                                <div><a class="sub2" href="">Equipment</a>
+                                                </div>
+                                            </div>
+                                        </menu-sub-item>
+                                    </div>
+                                    <div flex class="services">
+
+                                        <menu-sub-item subTitle="Services">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div>
+                                                    <a class="sub2" href="">Implementation</a>
+                                                </div>
+                                            </div>
+                                        </menu-sub-item>
+                                    </div>
+                                </div>
+                            </template>
+                            <template if="{{selectedPage=='Certification'}}">
+                                <div horizontal layout>
+                                    <div flex class="conferences">
+                                        <menu-sub-item subTitle="Conferences">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div>
+                                                    <a class="sub2" href="">Sig Sigma</a>
+                                                </div>
+                                                <div>
+                                                    <a class="sub2" href="">RFID</a>
+                                                </div>
+                                            </div>
+                                        </menu-sub-item>
+                                    </div>
+                                    <div flex class="programs">
+                                        <menu-sub-item subTitle="Programs">
+                                            <div vertical layout class="menu-sub-headings">
+                                                <div>
+                                                    <a class="sub2" href="">Sig Sigma</a>
+                                                </div>
+                                                <div>
+                                                    <a class="sub2" href="">RFID</a>
+                                                </div>
+                                            </div>
+                                        </menu-sub-item>
+                                    </div>
+                                </div>
+
+                            </template>
+                        </div>
+                    </core-collapse>
                     <core-collapse id="collapse">
                         <core-animated-pages selected="{{selectedMenuExpanded}}" transitions="cross-fade-all ">
                             <section>
@@ -109,7 +223,7 @@
                                             <div vertical layout class="menu-sub-headings">
                                                 <div><a class="sub2" href="">Apps</a>
                                                 </div>
-                                                <div><a class="sub2" href="">AD_RFID</a>
+                                                <div><a class="sub2" href="">RFID</a>
                                                 </div>
                                                 <div><a class="sub2" href="">Equipment</a>
                                                 </div>
@@ -121,11 +235,12 @@
                                         <menu-sub-item subTitle="Services">
                                             <div vertical layout class="menu-sub-headings">
                                                 <div>
-                                                    <a class="sub2" href="">Implementation??</a>
+                                                    <a class="sub2" href="">Implementation</a>
                                                 </div>
                                             </div>
                                         </menu-sub-item>
                                     </div>
+                                </div>
                             </section>
                             <section>
                                 <div>
@@ -137,7 +252,8 @@
                                             <div vertical layout class="menu-sub-headings">
                                                 <div>
                                                     <a class="sub2" href="">Sig Sigma</a>
-                                                </div><div>
+                                                </div>
+                                                <div>
                                                     <a class="sub2" href="">RFID</a>
                                                 </div>
                                             </div>
@@ -148,7 +264,8 @@
                                             <div vertical layout class="menu-sub-headings">
                                                 <div>
                                                     <a class="sub2" href="">Sig Sigma</a>
-                                                </div><div>
+                                                </div>
+                                                <div>
                                                     <a class="sub2" href="">RFID</a>
                                                 </div>
                                             </div>
@@ -158,8 +275,8 @@
                             </section>
                         </core-animated-pages>
                     </core-collapse>
-                    </div>
                 </div>
+            </div>
 
         </paper-shadow>
     </template>
@@ -191,14 +308,17 @@
                 this.menuHover = true;
                 this.collapseMenuVar = false;
                 this.$.collapse.opened = true;
+                this.$.collapse2.opened = false;
             },
             collapseMenu: function () {
                 this.menuHover = false;
                 this.$.collapse.opened = false;
+                this.$.collapse2.opened = true;
             },
             collapseMenuVarChanged: function () {
                 if (this.collapseMenuVar == true) {
                     this.$.collapse.opened = false;
+                    this.$.collapse2.opened = true;
                 }
             },
             hideSubMenu: function () {
