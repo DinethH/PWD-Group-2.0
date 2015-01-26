@@ -1,5 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<polymer-element name="menu-item" attributes="text collapseMenuVar selectedMenuExpanded">
+<polymer-element name="menu-item" attributes="text collapseMenuVar selectedMenuExpanded selected">
     <template>
         <link rel="stylesheet" href="menu-item.css">
         <style>
@@ -30,12 +30,18 @@
             },
             selectedStyles: function () {
                 this.textColor = "black";
+                this.backgroundColor = "#ccc";
+                this.marginTop = "-10px";
+                this.paddingBottom = "10px";
+            },
+            actualSelectedStyles: function () {
+                this.textColor = "black";
                 this.backgroundColor = "white";
                 this.marginTop = "-10px";
                 this.paddingBottom = "10px";
             },
             selectedMenuChanged: function () {
-                if (this.selectedMenu == true) {
+                if (this.selectedMenu == true && this.selected == false) {
                     if (this.text === "Consulting" && this.selectedMenuExpanded == 0) {
                         this.selectedStyles();
                     }
@@ -52,7 +58,7 @@
                         this.selectedStyles();
                     }
 
-                } else {
+                } else if (this.selected == false) {
                     this.textColor = "white";
                     this.backgroundColor = "transparent";
                     this.marginTop = "0px";
@@ -61,7 +67,7 @@
                 }
             },
             collapseMenuVarChanged: function () {
-                if (this.collapseMenuVar == true && this.selectedMenu == true) {
+                if (this.collapseMenuVar == true && this.selected == false) {
                     this.textColor = "white";
                     this.backgroundColor = "transparent";
                     this.marginTop = "0px";
@@ -72,6 +78,11 @@
             selectedMenuExpandedChanged: function () {
                 this.selectedMenu = false;
 
+            },
+            selectedChanged: function () {
+                if (this.selected == true) {
+                    this.actualSelectedStyles();
+                }
             }
         });
     </script>

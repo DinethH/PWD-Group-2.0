@@ -17,19 +17,19 @@
                 <div horizontal layout>
 
                     <div flex>
-                        <menu-item on-tap="{{menuConsulting}}" text="Consulting" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
+                        <menu-item on-tap="{{menuConsulting}}" text="Consulting" selected="{{selectedPage=='Consulting'}}" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
                     </div>
                     <div flex>
-                        <menu-item on-tap="{{menuPublications}}" text="Publications" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
+                        <menu-item on-tap="{{menuPublications}}" text="Publications" selected="{{selectedPage=='Publications'}}"  collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
                     </div>
                     <div flex>
-                        <menu-item on-tap="{{menuInnovation}}" text="Technology" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
+                        <menu-item on-tap="{{menuInnovation}}" text="Technology" selected="{{selectedPage=='Technology'}}"  collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
                     </div>
                     <div flex>
-                        <menu-item on-tap="{{menuTraining}}" text="Certification" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
+                        <menu-item on-tap="{{menuTraining}}" text="Certification" selected="{{selectedPage=='Certification'}}"  collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
                     </div>
                     <div flex>
-                        <menu-item on-tap="{{menuRealEstate}}" text="Real Estate" collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
+                        <menu-item on-tap="{{menuRealEstate}}" text="Real Estate" selected="{{selectedPage=='Real Estate'}}"  collapseMenuVar="{{collapseMenuVar}}" selectedMenuExpanded="{{selectedMenuExpanded}}"></menu-item>
                     </div>
                 </div>
 
@@ -75,7 +75,7 @@
                                     <div flex class="products">
                                         <menu-sub-item subTitle="Products">
                                             <div vertical layout class="menu-sub-headings">
-                                                <div><a class="sub2" href="">Books</a>
+                                                <div><a target="_blank" class="sub2" href="http://pwdgroups.com/marketplace.php">Books</a>
                                                 </div>
                                             </div>
                                         </menu-sub-item>
@@ -96,7 +96,7 @@
                                     <div flex class="products">
                                         <menu-sub-item subTitle="Products">
                                             <div vertical layout class="menu-sub-headings">
-                                                <div><a class="sub2" href="">Apps</a>
+                                                <div><a class="sub2" href="../../apps/">Apps</a>
                                                 </div>
                                                 <div><a class="sub2" href="">RFID</a>
                                                 </div>
@@ -123,10 +123,10 @@
                                         <menu-sub-item subTitle="Conferences">
                                             <div vertical layout class="menu-sub-headings">
                                                 <div>
-                                                    <a class="sub2" href="">Sig Sigma</a>
+                                                    <a class="sub2" href="http://pwdgroups.com/risesixsigma/">Six Sigma</a>
                                                 </div>
                                                 <div>
-                                                    <a class="sub2" href="">RFID</a>
+                                                    <a class="sub2" href="http://pwdgroups.com/next-gen-rfid-unleashed/">RFID</a>
                                                 </div>
                                             </div>
                                         </menu-sub-item>
@@ -135,10 +135,10 @@
                                         <menu-sub-item subTitle="Programs">
                                             <div vertical layout class="menu-sub-headings">
                                                 <div>
-                                                    <a class="sub2" href="">Sig Sigma</a>
+                                                    <a class="sub2" href="http://pwdgroups.com/risesixsigma/">Six Sigma</a>
                                                 </div>
                                                 <div>
-                                                    <a class="sub2" href="">RFID</a>
+                                                    <a class="sub2" href="http://pwdgroups.com/next-gen-rfid-unleashed/">RFID</a>
                                                 </div>
                                             </div>
                                         </menu-sub-item>
@@ -196,7 +196,7 @@
                                         <div flex class="products">
                                             <menu-sub-item subTitle="Products">
                                                 <div vertical layout class="menu-sub-headings">
-                                                    <div><a class="sub2" href="">Books</a>
+                                                    <div><a target="_blank" class="sub2" href="http://pwdgroups.com/marketplace.php">Books</a>
                                                     </div>
                                                 </div>
                                             </menu-sub-item>
@@ -221,7 +221,7 @@
                                     <div flex class="products">
                                         <menu-sub-item subTitle="Products">
                                             <div vertical layout class="menu-sub-headings">
-                                                <div><a class="sub2" href="">Apps</a>
+                                                <div><a class="sub2" href="../../apps/">Apps</a>
                                                 </div>
                                                 <div><a class="sub2" href="">RFID</a>
                                                 </div>
@@ -251,10 +251,10 @@
                                         <menu-sub-item subTitle="Conferences">
                                             <div vertical layout class="menu-sub-headings">
                                                 <div>
-                                                    <a class="sub2" href="">Sig Sigma</a>
+                                                    <a class="sub2" href="http://pwdgroups.com/risesixsigma/">Six Sigma</a>
                                                 </div>
                                                 <div>
-                                                    <a class="sub2" href="">RFID</a>
+                                                    <a class="sub2" href="http://pwdgroups.com/next-gen-rfid-unleashed/">RFID</a>
                                                 </div>
                                             </div>
                                         </menu-sub-item>
@@ -263,10 +263,10 @@
                                         <menu-sub-item subTitle="Programs">
                                             <div vertical layout class="menu-sub-headings">
                                                 <div>
-                                                    <a class="sub2" href="">Sig Sigma</a>
+                                                    <a class="sub2" href="http://pwdgroups.com/risesixsigma/">Six Sigma</a>
                                                 </div>
                                                 <div>
-                                                    <a class="sub2" href="">RFID</a>
+                                                    <a class="sub2" href="http://pwdgroups.com/next-gen-rfid-unleashed/">RFID</a>
                                                 </div>
                                             </div>
                                         </menu-sub-item>
